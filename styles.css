@@ -1,0 +1,167 @@
+/* Estilos globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilo principal para o container */
+.first-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #ff4757; /* Adiciona uma cor de destaque */
+}
+
+/* Estilo para as seções internas */
+.section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Título das seções */
+h2 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #2f3542;
+    border-bottom: 2px solid #ff6b81; /* Cor de destaque */
+    padding-bottom: 5px;
+}
+
+/* Estilo para os parágrafos */
+p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Estilos para o formulário com inputs alinhados */
+.form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    width: 150px; /* Tamanho fixo para os labels */
+    margin-right: 10px;
+    font-weight: bold;
+    color: #57606f;
+}
+
+.form-group input, .form-group select {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #dcdde1;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff;
+    color: #2f3542;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #ff4757; /* Cor de destaque no foco */
+}
+
+/* Estilo para o botão */
+button {
+    background: linear-gradient(135deg, #ff4757, #ff6b81);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff6b81, #ff4757);
+}
+
+/* Ajustes responsivos para telas menores */
+@media (max-width: 768px) {
+    .first-container {
+        flex-direction: column;
+    }
+}
+
+tr {
+    font-size: small;
+}
+
+tr.produto input {
+    max-width: 145px; /* Define a largura máxima dos inputs */
+    padding: 8px; /* Adiciona espaçamento interno */
+    border: 1px solid #ccc; /* Borda leve ao redor do input */
+    border-radius: 5px; /* Arredonda os cantos dos inputs */
+    box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+}
+
+button.exportar {
+    display: block;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    /*display: flex;*/
+    gap: 20px;
+    padding: 0.5px 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-left: 8px solid #ff4757; /* Adiciona uma cor de destaque */
+}
+
+/*estilos específicos para impressão*/
+@media print {
+    button.exportar {
+        display: none;
+    }
+    /* Forçar o layout flex na impressão para manter os divs lado a lado */
+    .first-container {
+        display: flex !important; /* Garante que o flex seja aplicado na impressão */
+        flex-direction: row !important; /* Garante que as divs fiquem lado a lado */
+    }
+
+    .section {
+        flex: 1;
+        padding: 10px;
+        border: 1px solid #ccc;}
+
+    tr.produto input {
+        max-width: 110px; /* Define a largura máxima dos inputs */
+        padding: 8px; /* Adiciona espaçamento interno */
+        border: 1px solid #ccc; /* Borda leve ao redor do input */
+        border-radius: 5px; /* Arredonda os cantos dos inputs */
+        box-sizing: border-box; /* Inclui o padding e a borda no tamanho total */
+    }
+    /* Se houver outros elementos que não quer exibir na impressão, esconda-os aqui */
+}
