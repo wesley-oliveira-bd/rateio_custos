@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rateio de Custos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Cálculo de ICMS-ST e outros custos</h1>
+    <div class="first-container">
+        <div class="section">
+            <div class="form-group">
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa" name="empresa"><br>
+            </div>
+        </div>
+    </div>
+
+    <div class="first-container">
+        <div class="section">
+            <h2>Dados da Nota Fiscal</h2>
+            <div class="form-group">
+                <label for="fornecedor">Fornecedor:</label>
+                <input type="text" id="fornecedor" name="fornecedor"><br>
+            </div>
+            <div class="form-group">
+                <label for="nf">Número da NF:</label>
+                <input type="text" id="nf" name="nf"><br>
+            </div>
+            <div class="form-group">
+                <label for="dataEmissao">Data de Emissão:</label>
+                <input type="date" id="dataEmissao" name="dataEmissao"><br>
+            </div>
+            <div class="form-group">
+                <label for="dataAtual">Data Atual:</label>
+                <input type="date" id="dataAtual" name="dataAtual" readonly><br>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Tributos e Outros Custos</h2>
+            <div class="form-group">
+                <label for="ipi">IPI (R$):</label>
+                <input type="number" id="ipi" name="ipi" step="0.01"><br>
+            </div>
+            <div class="form-group">
+                <label for="icmsST">ICMS-ST (R$):</label>
+                <input type="number" id="icmsST" name="icmsST" step="0.01"><br>
+            </div>
+            <div class="form-group">
+                <label for="frete">Frete (R$):</label>
+                <input type="number" id="frete" name="frete" step="0.01"><br>
+            </div>
+            <div class="form-group">
+                <label for="adicional">Adicionais (R$):</label>
+                <input type="number" id="adicional" name="adicional" step="0.01"><br>
+            </div>
+        </div>
+    </div>    
+
+    <div class="first-container">
+        <div class="table-container">
+            <h2>Produtos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Quantidade</th>
+                        <th>Referência</th>
+                        <th>Custo s/imp (R$)</th>
+                        <th>Custo Unit. (R$)</th>
+                        <th>Custo Total (R$)</th>
+                        <th>Margem (%)</th>
+                        <th>Valor Venda (R$)</th>
+                    </tr>
+                </thead>
+                <tbody id="produtos">
+                    <tr class="produto">
+                        <td><input type="text" class="codigo"></td>
+                        <td><input type="number" class="quantidade" step="0.01"></td>
+                        <td><input type="text" class="referencia"></td>
+                        <td><input type="number" class="custoUnitario" step="0.01"></td>
+                        <td><input type="number" class="custoCalculadoUnitario" step="0.01"></td>
+                        <td><input type="number" class="custoCalculado" readonly></td>
+                        <td><input type="number" class="margem" step="0.01"></td>
+                        <td><input type="number" class="valorVenda" readonly></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="exportar" onclick="calcularCusto()">Calcular Custos</button>
+        </div>
+    </div>
+
+    <div class="first-container">
+        <div class="section">
+            <h2>Totais</h2>
+            <p>Valor Custo Total: R$ <span id="custoTotal">0.00</span></p>
+            <p>Valor Custo Total com impostos e despesas: R$ <span id="custoCalculadoTotal">0.00</span></p>
+        </div>
+    </div>
+    <button class="exportar" onclick="exportarRelatorio()">Imprimir/Exportar Relatório</button>
+
+    <script src="script.js"></script>
+
+    <footer><p>Página desenvovinda por <a href="https://wa.me/5537988260767" target="_blank" style="color: #0078D7; text-decoration: none;">Wesley Oliveira</a></p></footer>
+
+</body>
+</html>
