@@ -111,7 +111,7 @@ tr {
 }
 
 tr.produto input {
-    max-width: 145px; /* Define a largura máxima dos inputs */
+    max-width: 135px; /* Define a largura máxima dos inputs */
     padding: 8px; /* Adiciona espaçamento interno */
     border: 1px solid #ccc; /* Borda leve ao redor do input */
     border-radius: 5px; /* Arredonda os cantos dos inputs */
@@ -142,7 +142,7 @@ footer {
 
 /*estilos específicos para impressão*/
 @media print {
-    button.exportar {
+    button {
         display: none;
     }
     /* Forçar o layout flex na impressão para manter os divs lado a lado */

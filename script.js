@@ -87,6 +87,7 @@ function adicionarNovaLinhaProduto() {
         <td><input type="number" class="custoCalculado" readonly></td>
         <td><input type="number" class="margem" step="0.01"></td>
         <td><input type="number" class="valorVenda"></td>
+        <td><button onclick="adicionarNovaLinhaProduto()">+</button></td>
     `;
 
     tabela.appendChild(novaLinha);
