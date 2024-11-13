@@ -165,3 +165,9 @@ footer {
     }
     /* Se houver outros elementos que não quer exibir na impressão, esconda-os aqui */
 }
+
+.input-bold {
+    font-weight: bold;
+    color: blue;
+    font-size: medium;
+}

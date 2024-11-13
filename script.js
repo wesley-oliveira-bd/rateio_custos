@@ -79,14 +79,14 @@ function adicionarNovaLinhaProduto() {
     novaLinha.classList.add('produto');
 
     novaLinha.innerHTML = `
-        <td><input type="text" class="codigo"></td>
+        <td><input type="text" class="codigo input-bold"></td>
         <td><input type="number" class="quantidade" step="0.01"></td>
         <td><input type="text" class="referencia"></td>
         <td><input type="number" class="custoUnitario" step="0.01"></td>
         <td><input type="number" class="custoCalculadoUnitario" readonly></td> <!-- Novo campo -->
-        <td><input type="number" class="custoCalculado" readonly></td>
+        <td><input type="number" class="custoCalculado input-bold" readonly></td>
         <td><input type="number" class="margem" step="0.01"></td>
-        <td><input type="number" class="valorVenda"></td>
+        <td><input type="number" class="valorVenda input-bold"></td>
         <td><button onclick="adicionarNovaLinhaProduto()">+</button></td>
     `;
 
