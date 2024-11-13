@@ -83,8 +83,8 @@ function adicionarNovaLinhaProduto() {
         <td><input type="number" class="quantidade" step="0.01"></td>
         <td><input type="text" class="referencia"></td>
         <td><input type="number" class="custoUnitario" step="0.01"></td>
-        <td><input type="number" class="custoCalculadoUnitario" readonly></td> <!-- Novo campo -->
-        <td><input type="number" class="custoCalculado input-bold" readonly></td>
+        <td><input type="number" class="custoCalculadoUnitario input-bold" readonly></td> <!-- Novo campo -->
+        <td><input type="number" class="custoCalculado" readonly></td>
         <td><input type="number" class="margem" step="0.01"></td>
         <td><input type="number" class="valorVenda input-bold"></td>
         <td><button onclick="adicionarNovaLinhaProduto()">+</button></td>
